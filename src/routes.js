@@ -1,25 +1,27 @@
 import React from 'react';
 import PostManager from './Pages/PostsManagerPage/PostsManager'
+import ProductManager from './Pages/Productpage/Productpage'
+import Account from './Pages/Accountpage/Accountpage'
 
 
 const routes = [
   {
-    path: '/',
+    path: '/product',
     exact: true,
-    //main: () => <Home />
+    main: () => <ProductManager />
   },
   {
-    path: '/',
+    path: '/account',
     exact: true,
-    //main: () => <About />
+    main: () => <Account />
   },
   {
-    path: '/Contact',
+    path: '/team',
     exact: true,
     // main: () => <Contact />
   },
   {
-    path: '/Products',
+    path: '/feedback',
     exact: false,
     //main: ({match}) => <Products match={match} />
   },

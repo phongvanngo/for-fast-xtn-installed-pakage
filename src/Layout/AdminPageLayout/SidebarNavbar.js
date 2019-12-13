@@ -41,6 +41,12 @@ class SidebarNavbar extends Component {
               </li>
             </NavLink>
 
+            <NavLink  to="/account" onClick = {()=>this.setTitleNavbar('Quản lý tài khoản')}>
+              <li>
+                <a>Quản lý tài khoản</a>
+              </li>
+            </NavLink>
+
             <NavLink to="/client"onClick = {()=>this.setTitleNavbar('Quản lý khách hàng')}>
               <li>
                 <a>Quản lý khách hàng</a>
@@ -76,31 +82,15 @@ class SidebarNavbar extends Component {
         <nav className="navbar navbar-default ">
           <div className="container-fluid">
             <div className="navbar-header">
-
-              {/* <div class="row"> */}
               <button style={{float:'left'}} type="button" id="sidebarCollapse" className="btn btn-info navbar-btn" onClick={this.onClick}>
                 <i className="fas fa-bars"></i>
                 <span></span>
               </button>
               <h3 style={{float:'left',marginLeft:10}}>{this.state.title}</h3>
-              {/* </div> */}
-              
             </div>
           </div>
         </nav>
-
       </div>
-
-      // {/* <Route exact path="/home">
-      //   <Home />
-      // </Route>
-      // <Route path="/about">
-      //   <About />
-      // </Route>
-      // <Route path="/contact">
-      //   <Contact />
-      // </Route> */}
-
 
     )
   }
