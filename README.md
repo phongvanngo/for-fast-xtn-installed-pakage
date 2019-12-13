@@ -1,0 +1,1 @@
+# for-fast-xtn-installed-pakage
