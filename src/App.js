@@ -6,20 +6,11 @@ import Routes from './routes';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Fragment>
-          <div className="App">
-            <SidebarNavbar />
-            <div id="board">
-              <Switch>
-                {Routes.map((route, index) => {
-                  return <Route path={route.path} component={route.main} exact={route.exact} key={index} />
-                })}
-              </Switch>
-            </div>
-          </div>
-        </Fragment>
-      </Router>
+      <Router> 
+      <Switch>
+        <Routes/>
+      </Switch>
+    </Router>
     )
   }
 }

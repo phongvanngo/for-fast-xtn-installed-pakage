@@ -6,7 +6,7 @@ import Form from './Components/Form';
 class Productpage extends Component {
   render(){
     return (
-      <div className="container-fluid">
+      <div className ="container-fluid">
         <Title/>
         <hr/>
         <Form />

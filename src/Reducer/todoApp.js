@@ -7,6 +7,8 @@ import isDisplayForm from './showForm';
 import modal from './modal';
 import products from './Product';
 import productSelected from './ProductSelected';
+import isAuthenticated from './authenticated';
+import loginUser from './login';
 
 const todoApp = combineReducers({
   posts,
@@ -16,7 +18,9 @@ const todoApp = combineReducers({
   isDisplayForm,
   modal,
   products,
-  productSelected
+  productSelected,
+  isAuthenticated,
+  loginUser
 })
 
 export default todoApp;

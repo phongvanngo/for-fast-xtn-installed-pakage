@@ -1,5 +1,6 @@
 import callApi from './../Utils/apiCaller';
 import * as Types from '../Constants/ActionTypes'
+import api from "../service/api";
 
 //Ngo Van Phong--------------------------------------------------------------
 export const closePostForm = () => {
@@ -304,5 +305,41 @@ export const isSelected = product => {
   return {
     type: Types.IS_SELECTED,
     product
+  }
+}
+
+export const loginRequest = user => {
+  return dispatch => {
+      return api.post('user/login', user)
+      .then( response => {
+        if (response.status === 200){
+          dispatch(isAuthenticated());
+          localStorage.setItem("accessToken", response.data.token)
+          dispatch(loginUser(user));
+          console.log(response);
+        }
+      })
+      .catch( err => {
+          console.log(err); 
+      })
+  }
+}
+
+export const isAuthenticated = () => {
+  return {
+      type: Types.IS_AUTHENTICATED
+  }
+}
+
+export const loginUser = user => {
+  return {
+      type: Types.LOGIN_USER,
+      user
+  }
+}
+
+export const isntAuthenticated = () => {
+  return {
+      type: Types.LOGOUT_USER
   }
 }
