@@ -7,7 +7,7 @@ class SidebarNavbar extends Component {
     super(props);
     this.state = {
       isDisplaySidebar: true,
-      title: 'Quản lý sản phẩm'
+      title: 'Quản lý sản phẩm',
     }
   }
 
@@ -24,9 +24,10 @@ class SidebarNavbar extends Component {
     })
   }
 
+
   render() {
     return (
-      <div>
+      <div >
         <nav id="sidebar" className={this.state.isDisplaySidebar ? "sidebarActive" : "sidebarDeactive"} >
           <div className="sidebar-header">
             <h4>Xuân tình nguyện 2019</h4>
